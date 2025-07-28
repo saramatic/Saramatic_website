@@ -1,5 +1,9 @@
+// app/layout.jsx
+
 import "./globals.css";
 import { Nunito_Sans } from "next/font/google";
+import Header from "../components/Header"; // ✅ Import your Header component
+import Footer from "../components/Footer";
 
 // ✅ Font config
 const nunito = Nunito_Sans({
@@ -48,18 +52,19 @@ export const metadata = {
   },
 };
 
-// ✅ Root layout
+// ✅ Root layout with Header
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Favicon (optional here if you also have /favicon.ico in public) */}
         <link rel="icon" href="/saramaticLogo2.png" />
       </head>
       <body
         className={`${nunito.variable} font-sans antialiased bg-[#fff1f1] text-[#514241]`}
       >
+        <Header /> {/* ✅ Appears on all pages */}
         {children}
+        <Footer /> {/* ✅ Clean and simple footer */}
       </body>
     </html>
   );

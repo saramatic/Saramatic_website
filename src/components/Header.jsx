@@ -10,7 +10,7 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
 
-    // Style for active internal links
+    // Active link styling helper
     const linkClass = (path) =>
         `transition-colors hover:text-[#fdc2c1] ${pathname === path ? "text-[#fdc2c1] font-semibold" : "text-[#514241]"
         }`;
@@ -55,12 +55,12 @@ export default function Header() {
                 >
                     My Blog
                 </Link>
-                <Link href="#contact" className="text-[#514241] hover:text-[#fdc2c1] transition-colors">
+                <Link href="/contact" className={linkClass("/contact")}>
                     Contact
                 </Link>
             </nav>
 
-            {/* Mobile Hamburger Button */}
+            {/* Mobile Hamburger */}
             <div className="md:hidden">
                 <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle navigation">
                     {isOpen ? (
@@ -99,8 +99,8 @@ export default function Header() {
                         My Blog
                     </Link>
                     <Link
-                        href="#contact"
-                        className="text-[#514241] hover:text-[#fdc2c1]"
+                        href="/contact"
+                        className={linkClass("/contact")}
                         onClick={() => setIsOpen(false)}
                     >
                         Contact
