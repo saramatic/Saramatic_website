@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -20,10 +21,10 @@ export default function Footer() {
 
                 {/* Middle: Navigation */}
                 <nav className="flex flex-wrap justify-center gap-4 text-sm font-sans">
-                    <a href="/" className="hover:underline">Home</a>
-                    <a href="#about" className="hover:underline">About</a>
-                    <a href="#freebie" className="hover:underline">Freebie</a>
-                    <a href="#contact" className="hover:underline">Contact</a>
+                    <Link href="/" className="hover:underline">Home</Link>
+                    <Link href="#about" className="hover:underline">About</Link>
+                    <Link href="#freebie" className="hover:underline">Freebie</Link>
+                    <Link href="#contact" className="hover:underline">Contact</Link>
                 </nav>
 
                 {/* Right: Motto / Copyright */}

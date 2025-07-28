@@ -1,6 +1,6 @@
 "use client";
 
-import { Youtube, PenTool, Mail, Video } from "lucide-react";
+import { Youtube, PenTool, Mail, Video, ShoppingBag, Heart } from "lucide-react";
 
 export default function Contact() {
     return (
@@ -11,10 +11,10 @@ export default function Contact() {
                     Whether you're vibing with the glow-up or want to collab, here’s where to find me:
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                     {/* YouTube */}
                     <a
-                        href="https://youtube.com/@Saramatic"
+                        href="https://www.youtube.com/@saramatic7"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition flex flex-col items-center text-center"
@@ -26,7 +26,7 @@ export default function Contact() {
 
                     {/* TikTok */}
                     <a
-                        href="https://tiktok.com/@Saramatic"
+                        href="https://www.tiktok.com/@saramatic53?lang=en"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition flex flex-col items-center text-center"
@@ -38,7 +38,7 @@ export default function Contact() {
 
                     {/* Medium */}
                     <a
-                        href="https://medium.com/@Saramatic"
+                        href="https://medium.com/@sara_7321"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition flex flex-col items-center text-center"
@@ -48,14 +48,28 @@ export default function Contact() {
                         <p className="text-sm font-sans">Read the transformation journey</p>
                     </a>
 
-                    {/* Email */}
+                    {/* Pinterest */}
                     <a
-                        href="mailto:sara@saramatic.com"
+                        href="https://www.pinterest.com/Saramatic7/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition flex flex-col items-center text-center"
                     >
-                        <Mail className="w-8 h-8 text-[#fdc2c1] mb-2" />
-                        <h3 className="font-semibold font-sans">Email</h3>
-                        <p className="text-sm font-sans">sara@saramatic.com</p>
+                        <Heart className="w-8 h-8 text-[#fdc2c1] mb-2" />
+                        <h3 className="font-semibold font-sans">Pinterest</h3>
+                        <p className="text-sm font-sans">Inspiration & wellness boards</p>
+                    </a>
+
+                    {/* Etsy */}
+                    <a
+                        href="https://www.etsy.com/shop/SaramaticDesigns"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition flex flex-col items-center text-center"
+                    >
+                        <ShoppingBag className="w-8 h-8 text-[#fdc2c1] mb-2" />
+                        <h3 className="font-semibold font-sans">Etsy</h3>
+                        <p className="text-sm font-sans">Shop digital products</p>
                     </a>
                 </div>
             </div>

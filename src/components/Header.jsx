@@ -1,8 +1,20 @@
-// components/Header.jsx
+"use client";
+
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
+    const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
+
+    // Style for active internal links
+    const linkClass = (path) =>
+        `transition-colors hover:text-[#fdc2c1] ${pathname === path ? "text-[#fdc2c1] font-semibold" : "text-[#514241]"
+        }`;
+
     return (
         <header className="w-full flex items-center justify-between px-6 py-4 bg-white shadow-md sticky top-0 z-50">
             {/* Logo */}
@@ -19,18 +31,82 @@ export default function Header() {
                 </span>
             </div>
 
-            {/* Navigation */}
-            <nav className="hidden md:flex space-x-6 text-sm text-[#514241] font-medium">
-                <Link href="#features" className="hover:text-[#fdc2c1] transition-colors">
-                    Features
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <Link href="/" className={linkClass("/")}>
+                    Home
                 </Link>
-                <Link href="#pricing" className="hover:text-[#fdc2c1] transition-colors">
-                    Pricing
+                <Link href="/about" className={linkClass("/about")}>
+                    About Me
                 </Link>
-                <Link href="#contact" className="hover:text-[#fdc2c1] transition-colors">
+                <Link
+                    href="https://www.etsy.com/shop/SaramaticDesigns"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#514241] hover:text-[#fdc2c1] transition-colors"
+                >
+                    My Etsy Store
+                </Link>
+                <Link
+                    href="https://medium.com/@sara_7321"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#514241] hover:text-[#fdc2c1] transition-colors"
+                >
+                    My Blog
+                </Link>
+                <Link href="#contact" className="text-[#514241] hover:text-[#fdc2c1] transition-colors">
                     Contact
                 </Link>
             </nav>
+
+            {/* Mobile Hamburger Button */}
+            <div className="md:hidden">
+                <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle navigation">
+                    {isOpen ? (
+                        <X className="w-6 h-6 text-[#514241]" />
+                    ) : (
+                        <Menu className="w-6 h-6 text-[#514241]" />
+                    )}
+                </button>
+            </div>
+
+            {/* Mobile Dropdown Menu */}
+            {isOpen && (
+                <div className="absolute top-[72px] left-0 w-full bg-white z-40 flex flex-col items-center py-6 space-y-4 text-sm font-medium shadow-md">
+                    <Link href="/" className={linkClass("/")} onClick={() => setIsOpen(false)}>
+                        Home
+                    </Link>
+                    <Link href="/about" className={linkClass("/about")} onClick={() => setIsOpen(false)}>
+                        About Me
+                    </Link>
+                    <Link
+                        href="https://www.etsy.com/shop/SaramaticDesigns"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#514241] hover:text-[#fdc2c1]"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        My Etsy Store
+                    </Link>
+                    <Link
+                        href="https://medium.com/@sara_7321"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#514241] hover:text-[#fdc2c1]"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        My Blog
+                    </Link>
+                    <Link
+                        href="#contact"
+                        className="text-[#514241] hover:text-[#fdc2c1]"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        Contact
+                    </Link>
+                </div>
+            )}
         </header>
     );
 }
