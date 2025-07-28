@@ -23,10 +23,25 @@ export default function Footer() {
 
                 {/* Middle: Navigation */}
                 <nav className="flex flex-wrap justify-center gap-4 text-sm font-sans">
-                    <Link href="/" className="hover:underline">Home</Link>
-                    <Link href="#about" className="hover:underline">About</Link>
-                    <Link href="#freebie" className="hover:underline">Freebie</Link>
-                    <Link href="#contact" className="hover:underline">Contact</Link>
+                    <Link href="/" className="hover:text-[#fdc2c1] transition-colors">Home</Link>
+                    <Link href="/about" className="hover:text-[#fdc2c1] transition-colors">About Me</Link>
+                    <Link
+                        href="https://www.etsy.com/shop/SaramaticDesigns"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-[#fdc2c1] transition-colors"
+                    >
+                        My Etsy Store
+                    </Link>
+                    <Link
+                        href="https://medium.com/@sara_7321"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-[#fdc2c1] transition-colors"
+                    >
+                        My Blog
+                    </Link>
+                    <Link href="/contact" className="hover:text-[#fdc2c1] transition-colors">Contact</Link>
                 </nav>
 
                 {/* Right: Motto / Copyright */}
