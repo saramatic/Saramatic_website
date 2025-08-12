@@ -34,10 +34,11 @@ export default function Footer() {
                         My Etsy Store
                     </Link>
                     <Link
-                        href="https://medium.com/@saramatic7"
+                        href="https://medium.com/@sara_7321" // <-- This is the incorrect link
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-[#fdc2c1] transition-colors"
+                        className="text-[#514241] hover:text-[#fdc2c1]"
+                        onClick={() => setIsOpen(false)}
                     >
                         My Blog
                     </Link>
