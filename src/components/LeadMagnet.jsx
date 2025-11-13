@@ -31,12 +31,12 @@ export default function LeadMagnet() {
                     and progress.
                 </p>
 
-                {/* Divider */}
+                {/* Small divider */}
                 <div className="w-16 h-[2px] bg-[#f2d6d4] mx-auto mb-10" />
             </div>
 
             {/* BODY SECTIONS */}
-            <div className="max-w-3xl mx-auto space-y-10 text-sm sm:text-base font-sans">
+            <div className="max-w-3xl mx-auto text-sm sm:text-base font-sans space-y-10">
                 {/* Why This Exists */}
                 <section>
                     <h3 className="text-lg sm:text-xl font-semibold mb-3">
@@ -54,45 +54,64 @@ export default function LeadMagnet() {
                     </p>
                 </section>
 
+                {/* Divider */}
+                <div className="border-t border-[#f2d6d4]/70 pt-8" />
+
                 {/* Two Kinds of Affirmations */}
                 <section>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-3">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-4">
                         Two Kinds of Affirmations
                     </h3>
 
-                    <p className="mb-3">
-                        Each week and day are connected through two core practices:
+                    <p className="mb-4">
+                        Each week and day are connected through two core practices that balance honesty and hope:
                     </p>
 
-                    <p className="mb-3">
-                        <span className="font-semibold">✴️ The Weekly Focus (Shadow Affirmation):</span>{" "}
-                        Each week begins with a single affirmation that reflects a real-life challenge —
-                        something many of us quietly struggle with, like impatience, self-doubt, or the
-                        pressure to be perfect. It’s called a <em>Shadow Affirmation</em> because it brings
-                        what’s usually unspoken into the open. It’s not negative — it’s honest. This weekly
-                        focus anchors your mindset so you can gently confront the pattern and grow from it.
-                    </p>
+                    {/* Shadow vs Light cards side-by-side */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                        {/* Shadow card */}
+                        <div className="bg-white/80 border border-[#f2d6d4] rounded-xl p-4 shadow-sm">
+                            <p className="font-semibold mb-1">✴️ Weekly Focus</p>
+                            <p className="font-semibold mb-2 text-sm">
+                                Shadow Affirmation
+                            </p>
+                            <p className="text-sm">
+                                One gentle, honest focus for the week that names a real-life challenge —
+                                like impatience, self-doubt, or the pressure to be perfect. It’s called a
+                                <em> Shadow Affirmation</em> because it brings what’s usually unspoken into
+                                the open. It’s not negative — it’s honest.
+                            </p>
+                            <p className="mt-3 text-xs italic text-[#8a7471]">
+                                Example: “I get frustrated when change feels slow — but I’m learning to give
+                                myself time.”
+                            </p>
+                        </div>
+
+                        {/* Light card */}
+                        <div className="bg-white/80 border border-[#f2d6d4] rounded-xl p-4 shadow-sm">
+                            <p className="font-semibold mb-1">☀️ Daily Practice</p>
+                            <p className="font-semibold mb-2 text-sm">
+                                Light Affirmation
+                            </p>
+                            <p className="text-sm">
+                                Every day introduces a new Light Affirmation — a statement that reframes or
+                                complements your weekly focus from a kinder, healthier angle. It helps you
+                                shift your thinking gradually and practice new emotional responses in real life.
+                            </p>
+                            <p className="mt-3 text-xs italic text-[#8a7471]">
+                                Example: “I can trust that progress is happening, even when I can’t see it yet.”
+                            </p>
+                        </div>
+                    </div>
 
                     <p>
-                        <span className="font-semibold">☀️ The Daily Practice (Light Affirmation):</span>{" "}
-                        Every day introduces a new Light Affirmation — a statement that reframes or
-                        complements your weekly focus from a healthier, kinder angle. These daily
-                        affirmations help you stay grounded, shift your thinking gradually, and practice
-                        new emotional responses in real life.
-                    </p>
-
-                    <p className="mt-3 italic">
-                        Example Shadow: “I get frustrated when change feels slow — but I’m learning to give
-                        myself time.”
-                        <br />
-                        Example Light: “I can trust that progress is happening, even when I can’t see it yet.”
-                    </p>
-
-                    <p className="mt-3">
                         Together, the weekly and daily affirmations build momentum: awareness first, then
                         action — reflection paired with renewal.
                     </p>
                 </section>
+
+                {/* Divider */}
+                <div className="border-t border-[#f2d6d4]/70 pt-8" />
 
                 {/* Guided Journaling with ChatGPT */}
                 <section>
@@ -105,7 +124,7 @@ export default function LeadMagnet() {
                         sticks, you’ll explore what it really means in your actual life.
                     </p>
                     <p className="italic mb-3">
-                        Example Prompt: “What part of this week’s focus felt hardest today? What small sign
+                        Example prompt: “What part of this week’s focus felt hardest today? What small sign
                         of progress can you acknowledge right now?”
                     </p>
                     <p>
@@ -113,6 +132,9 @@ export default function LeadMagnet() {
                         you feel, and how you grow.
                     </p>
                 </section>
+
+                {/* Divider */}
+                <div className="border-t border-[#f2d6d4]/70 pt-8" />
 
                 {/* How It Works */}
                 <section>
@@ -160,7 +182,10 @@ export default function LeadMagnet() {
                     </div>
                 </section>
 
-                {/* What Makes It Different / The Saramatic Way */}
+                {/* Divider */}
+                <div className="border-t border-[#f2d6d4]/70 pt-8" />
+
+                {/* What Makes It Different */}
                 <section>
                     <h3 className="text-lg sm:text-xl font-semibold mb-3">
                         What Makes It Different
@@ -171,47 +196,45 @@ export default function LeadMagnet() {
                         <li>Optional AI prompts for deeper journaling</li>
                         <li>Monthly themes that evolve naturally over the year</li>
                         <li>
-                            A grounded, supportive tone — no guilt, no toxic positivity, no pressure to
-                            “be perfect”
+                            A grounded, supportive tone — no guilt, no toxic positivity, no pressure to “be perfect”
                         </li>
                         <li>Crafted with thought, love, and intentional design — not mass production</li>
                     </ul>
+                </section>
 
-                    <p className="mt-4">
+                {/* Why It Works */}
+                <section>
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3">
+                        Why It Works
+                    </h3>
+                    <p className="mb-3">
+                        Saramatic uses emotional contrast — the balance between light and shadow — to create
+                        real self-integration. Instead of pretending everything is fine, it teaches your mind
+                        and heart to meet reality with honesty, compassion, and courage.
+                    </p>
+                    <p>
+                        Over time, you don’t just repeat affirmations — you embody them. This is growth that
+                        feels grounded, steady, and deeply human.
+                    </p>
+                </section>
+
+                {/* The Saramatic Way closing paragraph */}
+                <section>
+                    <p>
                         <span className="font-semibold">The Saramatic Way</span> is a new approach to
                         affirmations and self-growth — built on honesty, reflection, and emotional balance.
                         Real change doesn’t come from pretending everything’s fine. It comes from meeting
-                        yourself where you are — the calm moments, the messy ones, and everything in
-                        between — and choosing to grow through them with compassion.
+                        yourself where you are — the calm moments, the messy ones, and everything in between —
+                        and choosing to grow through them with compassion.
                     </p>
-
                     <p className="mt-3">
                         Every page of the planner is crafted with thought and love — designed to make
-                        self-reflection feel approachable, structured, and human. It’s more than a journal.
-                        It’s a daily practice of awareness, acceptance, and authentic growth — one week, one
-                        truth, one breakthrough at a time.
+                        self-reflection feel approachable, structured, and human. It’s more than a journal. It’s
+                        a daily practice of awareness, acceptance, and authentic growth — one week, one truth,
+                        one breakthrough at a time.
                     </p>
                 </section>
             </div>
-
-            {/* Why It Works */}
-            <section>
-                <h3 className="text-lg sm:text-xl font-semibold mb-3">
-                    Why It Works
-                </h3>
-
-                <p className="mb-3">
-                    Saramatic uses emotional contrast — the balance between light and shadow — to create real
-                    self-integration. Instead of pretending everything is fine, it teaches your mind and heart to
-                    meet reality with honesty, compassion, and courage.
-                </p>
-
-                <p>
-                    Over time, you don’t just repeat affirmations — you embody them. This is growth that feels
-                    grounded, steady, and deeply human.
-                </p>
-            </section>
-
 
             {/* CTA */}
             <div className="max-w-3xl mx-auto text-center mt-14">
