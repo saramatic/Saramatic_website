@@ -4,13 +4,10 @@ import Link from "next/link";
 
 export default function LeadMagnet() {
     return (
-        <section className="relative bg-gradient-to-b from-[#fff9f9] via-[#fdeeee] to-[#f8dede] py-20 px-6 text-[#514241] overflow-hidden">
-            {/* Soft background blobs */}
-            <div className="pointer-events-none absolute -top-10 -left-10 w-64 h-64 rounded-full bg-[#fdc2c1]/30 blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-16 -right-10 w-72 h-72 rounded-full bg-[#f2d6d4]/40 blur-3xl" />
+        <section className="bg-gradient-to-b from-[#fff9f9] via-[#fdeeee] to-[#f8dede] py-20 px-6 text-[#514241]">
+            <div className="max-w-3xl mx-auto text-center">
 
-            <div className="relative max-w-4xl mx-auto text-center rounded-2xl p-10 shadow-lg bg-white/95 border border-[#f2d6d4]">
-                {/* Badge */}
+                {/* Small badge */}
                 <div className="mb-4">
                     <span className="inline-block px-4 py-1 rounded-full text-xs sm:text-sm uppercase tracking-[0.18em] bg-[#fff5f5] text-[#8a7471] border border-[#f2d6d4]">
                         Coming Soon • Affirmation Planner
@@ -22,24 +19,24 @@ export default function LeadMagnet() {
                     The Saramatic Way
                 </h2>
 
-                {/* Short tagline */}
+                {/* Tagline */}
                 <p className="text-sm sm:text-base font-sans uppercase tracking-[0.18em] text-[#8a7471] mb-6">
                     Affirmations that finally make sense
                 </p>
 
                 {/* Main description */}
-                <p className="text-base sm:text-lg font-sans mb-8 leading-relaxed max-w-2xl mx-auto">
+                <p className="text-base sm:text-lg font-sans mb-10 leading-relaxed mx-auto">
                     Saramatic is a new approach to affirmations and self-growth — created with honesty,
                     compassion, and real life in mind. It blends weekly reflection, daily encouragement,
                     and guided journaling prompts so you can grow through what you actually feel, not
                     just “think positive.”
                 </p>
 
-                {/* Divider line */}
-                <div className="w-16 h-[2px] bg-[#f2d6d4] mx-auto mb-8" />
+                {/* Thin divider */}
+                <div className="w-16 h-[2px] bg-[#f2d6d4] mx-auto mb-10" />
 
-                {/* Shadow + Light + ChatGPT */}
-                <div className="text-left max-w-2xl mx-auto space-y-4 mb-8">
+                {/* Shadow + Light + ChatGPT – still structured, but no box */}
+                <div className="text-left space-y-5 mx-auto mb-12 text-sm sm:text-base">
                     <p className="font-sans">
                         <span className="font-semibold">Shadow Affirmations (Weekly):</span>{" "}
                         one gentle, honest focus for the week that names a real challenge — like
@@ -60,11 +57,11 @@ export default function LeadMagnet() {
                     </p>
                 </div>
 
-                {/* Coming soon copy + CTA */}
+                {/* Coming soon + CTA */}
                 <h3 className="text-2xl sm:text-3xl font-bold mb-2 font-sans">
                     Grow Through What’s Real
                 </h3>
-                <p className="text-base sm:text-lg font-sans mb-6 max-w-xl mx-auto">
+                <p className="text-base sm:text-lg font-sans mb-6 mx-auto">
                     The Saramatic Affirmation Planner is currently in development.
                     Follow Saramatic to see updates, behind-the-scenes progress, and launch details.
                 </p>
