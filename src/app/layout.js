@@ -61,6 +61,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="/saramaticLogo2.png" />
+
+        {/* Facebook domain verification */}
+        <meta
+          name="facebook-domain-verification"
+          content="4bmlf994ldf4npfhlm9uvr3v6bjgd3"
+        />
       </head>
       <body
         className={`${nunito.variable} font-sans antialiased bg-[#fff1f1] text-[#514241]`}
