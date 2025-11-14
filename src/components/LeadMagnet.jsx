@@ -1,7 +1,12 @@
-
 "use client";
 
 import Link from "next/link";
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({
+    subsets: ["latin"],
+    weight: ["600"],
+});
 
 export default function LeadMagnet() {
     return (
@@ -17,7 +22,9 @@ export default function LeadMagnet() {
                     </div>
 
                     {/* Title */}
-                    <h2 className="text-3xl sm:text-4xl font-bold mb-2 font-sans tracking-tight">
+                    <h2
+                        className={`${playfair.className} text-3xl sm:text-4xl font-bold mb-2 tracking-tight`}
+                    >
                         The Saramatic Way
                     </h2>
 
@@ -38,8 +45,8 @@ export default function LeadMagnet() {
                 </div>
             </section>
 
-            {/* SECTION 2 – WHY + SHADOW/LIGHT (Soft Neutral) */}
-            <section className="bg-[#fff9f9] py-16 px-6 text-[#514241]">
+            {/* SECTION 2 – WHY + SHADOW/LIGHT (Soft Rose-Beige) */}
+            <section className="bg-[#fdf4f0] py-16 px-6 text-[#514241]">
                 <div className="max-w-3xl mx-auto text-sm sm:text-base font-sans space-y-10">
                     {/* Why This Exists */}
                     <section>
@@ -184,8 +191,8 @@ export default function LeadMagnet() {
                 </div>
             </section>
 
-            {/* SECTION 4 – CLOSING + CTA (Neutral) */}
-            <section className="bg-[#fff9f9] py-16 px-6 text-[#514241]">
+            {/* SECTION 4 – CLOSING + CTA (Warm Sand / Blush) */}
+            <section className="bg-[#f7ece7] py-16 px-6 text-[#514241]">
                 <div className="max-w-3xl mx-auto text-sm sm:text-base font-sans space-y-10">
                     {/* What Makes It Different */}
                     <section>

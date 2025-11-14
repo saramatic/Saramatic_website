@@ -2,6 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({
+    subsets: ["latin"],
+    weight: ["600"],
+});
 
 export default function Header() {
     return (
@@ -16,7 +22,9 @@ export default function Header() {
                     className="rounded-full"
                 />
                 <div className="flex flex-col">
-                    <span className="text-xl font-bold text-[#514241] tracking-wide">
+                    <span
+                        className={`${playfair.className} text-xl md:text-2xl font-semibold text-[#514241] tracking-wide`}
+                    >
                         Saramatic
                     </span>
                     <span className="text-xs text-[#8a7471] uppercase tracking-[0.12em]">
